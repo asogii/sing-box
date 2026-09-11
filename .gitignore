@@ -7,6 +7,9 @@
 /bin/
 /dist/
 /sing-box
+/sing-box-amd64
+/sing-box-server-amd64
+/sing-box-arm64
 /sing-box.exe
 /build/
 /*.jar
