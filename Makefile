@@ -1,4 +1,5 @@
 NAME = sing-box
+OUTPUT ?= sing-box
 COMMIT = $(shell git rev-parse --short HEAD)
 TAGS ?= $(shell cat release/DEFAULT_BUILD_TAGS_OTHERS)
 
@@ -18,7 +19,7 @@ LIBBOX_FFI_CONFIG ?= ./experimental/libbox/ffi.json
 
 build:
 	export GOTOOLCHAIN=local && \
-	go build $(MAIN_PARAMS) $(MAIN)
+	go build $(MAIN_PARAMS) -o $(OUTPUT) $(MAIN)
 
 race:
 	export GOTOOLCHAIN=local && \
